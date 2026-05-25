@@ -1,5 +1,9 @@
 <script setup lang="ts">
+import { joinURL } from 'ufo'
+
 const { seo } = useAppConfig()
+const runtimeConfig = useRuntimeConfig()
+const faviconHref = joinURL(runtimeConfig.app.baseURL, 'favicon.ico')
 
 const { data: navigation } = await useAsyncData('navigation', () => queryCollectionNavigation('docs'))
 const { data: files } = useLazyAsyncData('search', () => queryCollectionSearchSections('docs'), {
@@ -11,7 +15,7 @@ useHead({
     { name: 'viewport', content: 'width=device-width, initial-scale=1' }
   ],
   link: [
-    { rel: 'icon', href: '/favicon.ico' }
+    { rel: 'icon', href: faviconHref }
   ],
   htmlAttrs: {
     lang: 'en'
