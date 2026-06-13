@@ -1,7 +1,7 @@
 ---
 seo:
   title: Pogo FrankenPHP Plugins
-  description: Documentation for Queue, Scheduler, Pogo, and WebSocket plugins for FrankenPHP.
+  description: Documentation for Queue, Scheduler, Pogo, Upload, and WebSocket plugins for FrankenPHP.
 ---
 
 ::u-page-hero{class="dark:bg-neutral-950"}
@@ -15,7 +15,7 @@ orientation: horizontal
 Pogo [FrankenPHP Plugins]{.text-primary}
 
 #description
-Queue, scheduler, request-scoped parallel jobs, and WebSockets compiled directly into a FrankenPHP binary.
+Queue, scheduler, request-scoped parallel tasks, uploads, and WebSockets compiled directly into a FrankenPHP binary.
 
 #links
   :::u-button
@@ -56,6 +56,16 @@ Queue, scheduler, request-scoped parallel jobs, and WebSockets compiled directly
       pogo_scheduler {
         command php artisan schedule:run
       }
+
+      pogo_upload {
+        store default {
+          worker public/upload-worker.php
+          signing_secret {$POGO_UPLOAD_SECRET}
+          backend local {
+            root storage/app/pogo-uploads
+          }
+        }
+      }
     }
   filename: Caddyfile
   ---
@@ -73,6 +83,16 @@ Queue, scheduler, request-scoped parallel jobs, and WebSockets compiled directly
 
     pogo_scheduler {
       command php artisan schedule:run
+    }
+
+    pogo_upload {
+      store default {
+        worker public/upload-worker.php
+        signing_secret {$POGO_UPLOAD_SECRET}
+        backend local {
+          root storage/app/pogo-uploads
+        }
+      }
     }
   }
   ```
@@ -114,7 +134,18 @@ The extension set
   Pogo
 
   #description
-  Request-scoped parallel PHP jobs for fan-out and fan-in work.
+Request-scoped parallel PHP tasks for fan-out and fan-in work.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-lucide-upload
+  ---
+  #title
+  Upload
+
+  #description
+  Signed single-file upload ingress with Go streaming and PHP completion events.
   :::
 
   :::u-page-feature
@@ -165,6 +196,17 @@ Choose the right tool
 
   #description
   Use Pogo when independent work must finish before the response returns.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-lucide-upload-cloud
+  ---
+  #title
+  Large uploads
+
+  #description
+  Use Upload when PHP should authorize uploads but Caddy should move the bytes.
   :::
 
   :::u-page-feature

@@ -46,6 +46,11 @@ export default defineAppConfig({
       'aria-label': 'Scheduler on GitHub'
     }, {
       'icon': 'i-simple-icons-github',
+      'to': 'https://github.com/y-l-g/upload',
+      'target': '_blank',
+      'aria-label': 'Upload on GitHub'
+    }, {
+      'icon': 'i-simple-icons-github',
       'to': 'https://github.com/y-l-g/websocket',
       'target': '_blank',
       'aria-label': 'WebSocket on GitHub'
@@ -65,6 +70,11 @@ export default defineAppConfig({
         icon: 'i-simple-icons-github',
         label: 'Pogo',
         to: 'https://github.com/y-l-g/pogo',
+        target: '_blank'
+      }, {
+        icon: 'i-simple-icons-github',
+        label: 'Upload',
+        to: 'https://github.com/y-l-g/upload',
         target: '_blank'
       }, {
         icon: 'i-simple-icons-github',

@@ -14,6 +14,10 @@
       to: '/extensions/pogo',
       icon: 'i-lucide-split'
     }, {
+      label: 'Upload',
+      to: '/extensions/upload',
+      icon: 'i-lucide-upload'
+    }, {
       label: 'WebSocket',
       to: '/extensions/websocket',
       icon: 'i-lucide-radio'
