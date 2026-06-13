@@ -156,7 +156,7 @@ Request-scoped parallel PHP tasks for fan-out and fan-in work.
   WebSocket
 
   #description
-  Pusher-compatible WebSocket handler and Laravel broadcaster.
+  Reverb/Pusher-compatible WebSocket handler and Laravel broadcaster.
   :::
 ::
 
@@ -217,7 +217,7 @@ Choose the right tool
   Realtime events
 
   #description
-  Use WebSocket for Pusher-style channels and Laravel broadcasting.
+  Use WebSocket for Reverb/Pusher-style channels and Laravel broadcasting.
   :::
 ::
 
