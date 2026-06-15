@@ -61,10 +61,10 @@ export default defineNuxtConfig({
   llms: {
     domain: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000/',
     title: 'Pogo FrankenPHP Plugins',
-    description: 'Documentation for Queue, Scheduler, Pogo, and WebSocket plugins for FrankenPHP.',
+    description: 'Documentation for Queue, Scheduler, Pogo, Upload, and WebSocket plugins for FrankenPHP.',
     full: {
       title: 'Pogo FrankenPHP Plugins - Full Documentation',
-      description: 'Full documentation for Queue, Scheduler, Pogo, and WebSocket plugins for FrankenPHP.'
+      description: 'Full documentation for Queue, Scheduler, Pogo, Upload, and WebSocket plugins for FrankenPHP.'
     },
     sections: [
       {

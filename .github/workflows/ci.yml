@@ -23,12 +23,22 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
           cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Lint
         run: pnpm run lint
 
       - name: Typecheck
         run: pnpm run typecheck
+
+      - name: Check docs inventory
+        run: pnpm run docs:check
+
+      - name: Build documentation
+        run: pnpm run build
+        env:
+          NITRO_PRESET: github_pages
+          NUXT_PUBLIC_SITE_URL: https://doc.pogo.y-l.fr

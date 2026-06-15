@@ -68,6 +68,11 @@ export default defineAppConfig({
         target: '_blank'
       }, {
         icon: 'i-simple-icons-github',
+        label: 'Scheduler',
+        to: 'https://github.com/y-l-g/scheduler',
+        target: '_blank'
+      }, {
+        icon: 'i-simple-icons-github',
         label: 'Pogo',
         to: 'https://github.com/y-l-g/pogo',
         target: '_blank'

@@ -1,6 +1,6 @@
 # Pogo FrankenPHP Plugin Docs
 
-Documentation site for the Pogo FrankenPHP plugins: Queue, Scheduler, Pogo, and WebSocket.
+Documentation site for the Pogo FrankenPHP plugins: Queue, Scheduler, Pogo, Upload, and WebSocket.
 
 ## Setup
 
