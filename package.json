@@ -23,7 +23,7 @@
     "@vueuse/core": "^14.3.0",
     "@takumi-rs/core": "^1.8.5",
     "minimark": "^0.2.0",
-    "nuxt": "^4.4.8",
+    "nuxt": "^4.5.2",
     "nuxt-llms": "0.2.0",
     "nuxt-og-image": "^6.6.0",
     "tailwindcss": "^4.3.1",
